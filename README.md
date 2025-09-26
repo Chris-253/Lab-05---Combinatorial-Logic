@@ -17,7 +17,12 @@ the constraints file maps your inputs and outputs to real pins on the FPGA.
 
 ### 1 - Explain the role of the Top Level file.
 
+The top level file declares inputs and outputs and connects the different logic gates together to get a final result. In this lab we used the Maxterm from the first gate to both control an LED and as an input into our Minterm. Our Minterm gate then outputted to a second LED
+
 ### 2 - Explain the function of the Constraints file.
+
+The constraints file determines what the program has/does not have access to. In our case we had to uncomment the lines that instantiated switch0-6 and led0-1 so that we could use them when we connected to the basys3 board.
 
 ### 3 - Was the selection of Minterm and Maxterm correct for each circuit? What would you have chosen?
 
+the Maxterm worked really well because you could do 2 simple groups of 8 that covers all the terms. The Minterm was simple enough that I would not have considered changing it.
